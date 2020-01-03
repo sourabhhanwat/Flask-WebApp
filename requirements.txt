@@ -1,0 +1,11 @@
+Werkzeug
+Flask
+numpy
+Keras
+gevent
+pillow
+h5py
+tensorflow
+mrcnn
+scikit-image
+IPython
