@@ -1,0 +1,220 @@
+/*
+Template Name: justdance
+File Name: responsive.css
+Author Name: ThemeVault
+Author URI: http://www.themevault.net/
+License URI: http://www.themevault.net/license/
+*/
+@media (max-width: 1199px){
+    #carousel-example-generic {
+        height: 600px;
+    }
+    #carousel-example-generic .carousel-inner .item{
+        height: 600px;
+    }
+    .related-website-details {
+        left: 73%;
+        top: 45%;
+    }
+    #carousel-example-generic .carousel-caption h3 {
+        font-size: 32px;
+    }
+    #carousel-example-generic .carousel-caption p {
+        font-size: 13px;
+        line-height: 20px;
+    }
+    .price-banner {
+        min-height: 400px;
+    }
+    .instructor-banner {
+        min-height: 600px;
+    }
+    .testimonial-banner {
+        min-height: 460px;
+    }
+    .left-box > p, .right-box a, .contact-list a {
+        font-size: 10px;
+        line-height: 20px;
+    }
+    .contact-banner {
+        min-height: 400px;
+    }
+    .about-para > p {
+        line-height: 21px;
+        max-height: 10em;
+        font-size: 12px;
+    }
+    .about-para .block-heading p {
+        margin-bottom: 20px;
+    }
+    .about-details > p {
+        line-height: 19px;
+        max-height: 8.2em;
+    }
+}
+@media (max-width: 991px){
+    .navbar-default .navbar-brand {
+        font-size: 24px;
+    }
+    .navbar-default .navbar-nav > li > a {
+        padding-left: 9px;
+        padding-right: 9px;
+        font-size: 12px;
+    }
+    .related-website-details {
+        left: 80%;
+        top: 50%;
+        width: 50%;
+    }
+    #carousel-example-generic .carousel-caption h3 {
+        font-size: 26px;
+    }
+    #carousel-example-generic {
+        height: 500px;
+    }
+    #carousel-example-generic .carousel-inner .item{
+        height: 500px;
+    }
+    .site-btn {
+        font-size: 13px;
+    }
+    .about-details > p {
+        font-size: 12px;
+        line-height: 22px;
+        text-align: justify;
+    }
+    .content-details h3 {
+        font-size: 20px;
+    }
+    .price-gd-top h3 {
+        font-size: 32px;
+    }
+    .price-gd-top h4 {
+        font-size: 12px;
+    }
+    .instructor-banner{
+        background-position: center center;
+    }
+    .trainer-details > h4 {
+        font-size: 18px;
+    }
+    #testimonial-Carousel .carousel-inner {
+        width: 70%;
+    }
+    .testimonial-banner {
+        min-height: 400px;
+    }
+    .about-details > p {
+        line-height: 22px;
+        max-height: 13em;
+    }
+}
+@media (max-width: 767px){
+    .margin-bottom30{
+        margin-bottom: 30px;
+    }
+    .navbar-default .navbar-toggle .icon-bar {
+        background-color: #fff;
+    }
+    .navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+        background-color: #e2001a;
+        border-color: #e2001a;
+    }
+    .navbar-default .navbar-collapse, .navbar-default .navbar-form {
+        background: #1f1b18 none repeat scroll 0 0;
+        border-color: transparent;
+        box-shadow: none;
+    }
+    .navbar-default .navbar-nav > li > a {
+        text-align: center;
+    }
+    .block-heading h2, .about-details h3 {
+        font-size: 26px;
+    }
+    .paddingTop-80{
+        padding-top: 60px;
+    }
+    .paddingbottom-80{
+        padding-bottom: 60px;
+    }
+    .price-banner {
+        min-height: 550px;
+    }
+    .instructor-banner{
+        background: none;
+        min-height: auto;
+    }
+    .gallery-list .nav-tabs > li > a {
+        font-size: 14px;
+        padding: 5px 8px;
+        margin-right: 0px;
+    }
+    .client-info > p {
+        font-size: 12px;
+        line-height: 20px;
+        margin: 20px 0;
+    }
+    .client-img i {
+        font-size: 26px;
+    }
+    .contact-banner {
+        background-position: center center;
+        min-height: 600px;
+    }
+}
+@media (max-width: 500px){
+    .width-100{
+        width:100%;
+    }
+    .block-heading h2, .about-details h3 {
+        font-size: 22px;
+    }
+}
+@media (max-width: 400px){
+    .width-100perc{
+        width:100%;
+    }
+    .marginBottom30{
+        margin-bottom: 30px;
+    }
+    #carousel-example-generic {
+        background-position: 10% center;
+        height: 480px;
+    }
+    .related-website-details {
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 70%;
+    }
+    #carousel-example-generic .carousel-control, #testimonial-Carousel .carousel-control {
+        width: 15%;
+    }
+    .about-para, .about-para > p, .about-details, .about-details > p, .contact-list {
+        text-align: center;
+    }
+    .padding20 {
+        padding: 20px 10px;
+    }
+    .price-banner {
+        background-position: center center;
+        min-height: 1100px;
+    }
+    .nav-tabs > li {
+        margin-right: 0;
+    }
+    .testimonial-banner {
+        background-position: 45% center;
+        min-height: 500px;
+    }
+    .social-icon-list a {
+        font-size: 14px;
+        height: 40px;
+        line-height: 40px;
+        margin-right: 6px;
+        width: 40px;
+    }
+    .copyright a {
+        line-height: 26px;
+    }
+}

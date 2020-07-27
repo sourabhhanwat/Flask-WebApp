@@ -1,40 +1,924 @@
-{% extends "base.html" %} {% block content %}
+<!--Template Name: justdance
+File Name: index.html
+Author Name: ThemeVault
+Author URI: http://www.themevault.net/
+License URI: http://www.themevault.net/license/-->
 
-<div class="row">
-    <div class="col-sm-4">
-        <center>
-        <form id="upload-file-coco" method="post" enctype="multipart/form-data">
-            <label for="imageUploadcoco" class="upload-label">
-               Image Choose...
-            </label>
-            <input type="file" name="file" id="imageUploadcoco" accept=".png, .jpg, .jpeg">
-        </form>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css?family=Poiret+One|Raleway:300,400,500,600,700,800,900" rel="stylesheet"> 
+        <title>JustDance</title>
+        <link rel="icon" href="static/favicon.png"/>
+        <!-- Bootstrap core CSS -->
+        <link href="static/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Custom styles for this template -->
+        <link href="static/css/style.css" rel="stylesheet">
+        <link href="static/css/responsive.css" rel="stylesheet">
+        <link href="static/fonts/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+        <link href="static/fonts/website-font/stylesheet.css" rel="stylesheet" type="text/css" />
+        <link href="static/css/mislider.css" rel="stylesheet" type="text/css" />
+        <link href="static/css/mislider-custom.css" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" href="static/css/animate.css">
+        <link rel="stylesheet" href="static/css/lightbox.min.css">
 
-        <div class="image-section-coco" style="display:none;">
-            <div class="img-preview">
-                <div id="imagePreviewcoco">
+        <script src="static/js/jquery.min.js" type="text/javascript"></script>
+        <script src="static/js/bootstrap.min.js" type="text/javascript"></script>
+        <script src="static/js/scrolling-nav.js" type="text/javascript"></script>
+        <script src="static/js/lightbox-plus-jquery.min.js" type="text/javascript"></script>
+        <script src="static/js/custom.js" type="text/javascript"></script>
+    </head>
+    <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+        <header>
+            <nav class="navbar navbar-default navbar-fixed-top">
+                <div class="container">
+                    <div class="navigation-bar">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>                        
+                            </button>
+                            <a class="navbar-brand" href="home.html">JustDance</a>
+                        </div>
+                        <div class="collapse navbar-collapse" id="myNavbar">
+                            <ul class="nav navbar-nav navbar-right">
+                                <li><a href="#myPage">Welcome</a></li>                               
+                                <li><a href="#about">About Us</a></li>
+                                <li><a href="#classes">Classes</a></li>
+                                <li><a href="#plan">plans</a></li>
+                                <li><a href="#instructors">Instructors</a></li>
+                                <li><a href="#gallery">Gallery</a></li> 
+                                <li><a href="#testimonial">Testimonial</a></li> 
+                                <li><a href="#contact">Contact Us</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <div class="bgbanner" id="slider">
+                <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">                   
+                    <div class="carousel-inner" role="listbox">
+                        <div class="item active">            
+                            <div class="carousel-caption">
+                                <div class="related-website-details">
+                                    <h3 data-wow-duration="1000ms" class="wow slideInLeft animated">Dance To The Beat</h3>
+                                    <p data-wow-duration="1000ms" class="wow slideInRight animated">Create the best moves for you</p>
+                                    <a href="#" data-wow-duration="500ms" class="wow slideInLeft animated site-btn">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="carousel-caption">
+                                <div class="related-website-details">
+                                    <h3 data-wow-duration="1000ms" class="wow slideInLeft animated">Be in the Spotlight</h3>
+                                    <p data-wow-duration="1000ms" class="wow slideInRight animated">Learn from the Best - Dance Professionals </p>
+                                    <a href="#" data-wow-duration="500ms" class="wow slideInLeft animated site-btn">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                            <img src="static/images/left-arrow.png" onmouseover="this.src = 'static/images/left-arrow-hover.png'" onmouseout="this.src = 'static/images/left-arrow.png'" alt="left">
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                            <img src="static/images/right-arrow.png" onmouseover="this.src = 'static/images/right-arrow-hover.png'" onmouseout="this.src = 'static/images/right-arrow.png'" alt="right">
+                        </a>
+                    </div>
+                </div>
+        </header>
+        <section class="about" id="about">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-6 col-sm-12 col-xs-12">
+                        <div class="about-para padding20">
+                            <div class="block-heading">
+                                <h2>About JustDance</h2>
+                                <p>Slave To The Rhythm</p>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean tincidunt diam sit amet suscipit faucibus. Nam porttitor imperdiet metus sed dapibus. Mauris semper leo dolor, vel condimentum ipsum commodo ac. Proin est quam, pulvinar id nibh a, rutrum dictum felis. Fusce quis velit condimentum, gravida massa quis, rutrum arcu. Donec sit amet enim in nibh viverra finibus ut ut sem. Nam pulvinar nibh risus, at commodo lectus placerat ac. Curabitur facilisis at tellus tincidunt convallis. Morbi ullamcorper sed elit vitae ornare.</p>
+                            <a href="#" class="site-btn2">Learn More</a>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 col-sm-6 col-xs-12 bgcolor-blue">
+                                <div class="about-details padding20">
+                                    <h3>Dance Classes</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean tincidunt diam sit amet suscipit faucibus. Nam porttitor imperdiet metus sed dapibus. Mauris semper leo dolor, vel condimentum ipsum commodo ac. Proin est quam, pulvinar id nibh a, rutrum dictum felis. Fusce quis velit condimentum, gravida massa quis, rutrum arcu.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-xs-12 bgcolor-red">
+                                <div class="about-details padding20">
+                                    <h3>Master Classes</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean tincidunt diam sit amet suscipit faucibus. Nam porttitor imperdiet metus sed dapibus. Mauris semper leo dolor, vel condimentum ipsum commodo ac. Proin est quam, pulvinar id nibh a, rutrum dictum felis. Fusce quis velit condimentum, gravida massa quis, rutrum arcu.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-12 col-xs-12 no-padding">
+                        <img src="static/images/about.jpg" class="img-responsive">
+                    </div>
                 </div>
             </div>
-            <div>
-                <button type="button" class="btn btn-primary btn-lg " id="btn-predict-coco">Predict!</button>
+        </section>
+        <section class="classes paddingTop-80" id="classes">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 text-center">
+                        <div class="block-heading paddingbottom-80">
+                            <h2>Dancing Classes</h2>
+                            <p>Slave To The Rhythm</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3 col-sm-3 col-xs-6 margin-bottom30 width-100perc">
+                        <div class="content">
+                            <div class="content-overlay"></div>
+                            <div class="classes-img">
+                                <img src="static/images/class1.jpg" alt="classes" class="img-responsive">
+                            </div>
+                            <div class="content-details fadeIn-top fadeIn-right">
+                                <h3>Tango Ballroom</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit Aenean suscipit faucibus.</p>
+                            </div>  
+                        </div>  
+                    </div>
+                    <div class="col-md-3 col-sm-3 col-xs-6 margin-bottom30 width-100perc">
+                        <div class="content">
+                            <div class="content-overlay"></div>
+                            <div class="classes-img">
+                                <img src="static/images/class2.jpg" alt="classes" class="img-responsive">
+                            </div>
+                            <div class="content-details fadeIn-top fadeIn-right">
+                                <h3>Acrobat</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit Aenean suscipit faucibus.</p>
+                            </div>  
+                        </div>  
+                    </div>
+                    <div class="col-md-3 col-sm-3 col-xs-6 width-100perc marginBottom30">
+                        <div class="content">
+                            <div class="content-overlay"></div>
+                            <div class="classes-img">
+                                <img src="static/images/class3.jpg" alt="classes" class="img-responsive">
+                            </div>
+                            <div class="content-details fadeIn-top fadeIn-right">
+                                <h3>Ballet Ballerina</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit Aenean suscipit faucibus.</p>
+                            </div>  
+                        </div>  
+                    </div>
+                    <div class="col-md-3 col-sm-3 col-xs-6 width-100perc">
+                        <div class="content">
+                            <div class="content-overlay"></div>
+                            <div class="classes-img">
+                                <img src="static/images/class4.jpg" alt="classes" class="img-responsive">
+                            </div>
+                            <div class="content-details fadeIn-top fadeIn-right">
+                                <h3>Hip Hop</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit Aenean suscipit faucibus.</p>
+                            </div>  
+                        </div>  
+                    </div>
+                </div>
             </div>
-        </div>
+        </section>
+        <section class="plans paddingTop-80" id="plan">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-12 text-center">
+                        <div class="block-heading paddingbottom-80">
+                            <h2>Our Pricing Pakages</h2>
+                            <p>Slave To The Rhythm</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="price-banner">
+                        <div class="rain-css">
+                            <i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i>
+                        </div>
+                        <div class="price-table">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-3 col-sm-3 col-xs-6 margin-bottom30 width-100perc">
+                                        <div class="price-grid">
+                                            <div class="price-block">
+                                                <div class="price-gd-top">
+                                                    <h4>1/2HR LESSON</h4>
+                                                    <h3>
+                                                        <span>$</span>
+                                                        69
+                                                    </h3>
+                                                    <h5>each</h5>
+                                                </div>
+                                                <div class="price-gd-bottom">
+                                                </div>
+                                            </div>
+                                            <div class="price-gd-bottom">
+                                                <div class="price-list">
+                                                    <ul>
+                                                        <li>
+                                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                                        </li>
+                                                        <li>
+                                                            <i class="fa fa-star-o" aria-hidden="true"></i>
+                                                        </li>
+                                                        <li>
+                                                            <i class="fa fa-star-o" aria-hidden="true"></i>
+                                                        </li>
+                                                        <li>
+                                                            <i class="fa fa-star-o" aria-hidden="true"></i>
+                                                        </li>
+                                                        <li>
+                                                            <i class="fa fa-star-o" aria-hidden="true"></i>
+                                                        </li>
+                                                    </ul>
+                                                    <h6>
+                                                        <i class="fa fa-street-view" aria-hidden="true"></i>
+                                                    </h6>
+                                                </div>
+                                                <a class="site-btn2" href="#">Sign Up</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 col-sm-3 col-xs-6 margin-bottom30 width-100perc">
+                                        <div class="price-grid">
+                                            <div class="price-block">
+                                                <div class="price-gd-top">
+                                                    <h4>3/4HR LESSON</h4>
+                                                    <h3>
+                                                        <span>$</span>
+                                                        99
+                                                    </h3>
+                                                    <h5>each</h5>
+                                                </div>
+                                                <div class="price-gd-bottom">
+                                                </div>
+                                            </div>
+                                            <div class="price-gd-bottom">
+                                                <div class="price-list">
+                                                    <ul>
+                                                        <li>
+                                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                                        </li>
+                                                        <li>
+                                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                                        </li>
+                                                        <li>
+                                                            <i class="fa fa-star-o" aria-hidden="true"></i>
+                                                        </li>
+                                                        <li>
+                                                            <i class="fa fa-star-o" aria-hidden="true"></i>
+                                                        </li>
+                                                        <li>
+                                                            <i class="fa fa-star-o" aria-hidden="true"></i>
+                                                        </li>
+                                                    </ul>
+                                                    <h6>
+                                                        <i class="fa fa-street-view" aria-hidden="true"></i>
+                                                    </h6>
+                                                </div>
+                                                <a class="site-btn2" href="#">Sign Up</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 col-sm-3 col-xs-6 marginBottom30 width-100perc">
+                                        <div class="price-grid">
+                                            <div class="price-block">
+                                                <div class="price-gd-top">
+                                                    <h4>1HR LESSON</h4>
+                                                    <h3>
+                                                        <span>$</span>
+                                                        149
+                                                    </h3>
+                                                    <h5>each</h5>
+                                                </div>
+                                                <div class="price-gd-bottom">
+                                                </div>
+                                            </div>
+                                            <div class="price-gd-bottom">
+                                                <div class="price-list">
+                                                    <ul>
+                                                        <li>
+                                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                                        </li>
+                                                        <li>
+                                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                                        </li>
+                                                        <li>
+                                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                                        </li>
+                                                        <li>
+                                                            <i class="fa fa-star-o" aria-hidden="true"></i>
+                                                        </li>
+                                                        <li>
+                                                            <i class="fa fa-star-o" aria-hidden="true"></i>
+                                                        </li>
+                                                    </ul>
+                                                    <h6>
+                                                        <i class="fa fa-street-view" aria-hidden="true"></i>
+                                                    </h6>
+                                                </div>
+                                                <a class="site-btn2" href="#">Sign Up</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 col-sm-3 col-xs-6 width-100perc">
+                                        <div class="price-grid">
+                                            <div class="price-block">
+                                                <div class="price-gd-top">
+                                                    <h4>2HR LESSON</h4>
+                                                    <h3>
+                                                        <span>$</span>
+                                                        199
+                                                    </h3>
+                                                    <h5>each</h5>
+                                                </div>
+                                                <div class="price-gd-bottom">
+                                                </div>
+                                            </div>
+                                            <div class="price-gd-bottom">
+                                                <div class="price-list">
+                                                    <ul>
+                                                        <li>
+                                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                                        </li>
+                                                        <li>
+                                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                                        </li>
+                                                        <li>
+                                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                                        </li>
+                                                        <li>
+                                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                                        </li>
+                                                        <li>
+                                                            <i class="fa fa-star-o" aria-hidden="true"></i>
+                                                        </li>
+                                                    </ul>
+                                                    <h6>
+                                                        <i class="fa fa-street-view" aria-hidden="true"></i>
+                                                    </h6>
+                                                </div>
+                                                <a class="site-btn2" href="#">Sign Up</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </section>
+        <section class="instructors paddingTop-80" id="instructors">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-12 text-center">
+                        <div class="block-heading paddingbottom-80">
+                            <h2>Our Instructors</h2>
+                            <p>Slave To The Rhythm</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="instructor-banner">
+                        <div class="instructor-box">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-offset-6 col-md-6 col-sm-offset-4 col-sm-8 col-xs-12">
+                                        <div class="row">
+                                            <div class="col-md-6 col-sm-6 col-xs-6 width-100perc">
+                                                <div class="content">
+                                                    <div class="content-overlay"></div>
+                                                    <div class="trainer-img">
+                                                        <img src="static/images/trainer1.jpg" alt="trainer" class="img-responsive">
+                                                    </div>
+                                                    <div class="content-details fadeIn-top fadeIn-right">
+                                                        <h3>Diana Evans</h3>
+                                                    </div>
+                                                </div>
+                                                <div class="trainer-details text-center padding20">
+                                                    <h4>Ballet Ballerina</h4>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 col-sm-6 col-xs-6 width-100perc">
+                                                <div class="content">
+                                                    <div class="content-overlay"></div>
+                                                    <div class="trainer-img">
+                                                        <img src="static/images/trainer2.jpg" alt="trainer" class="img-responsive">
+                                                    </div>
+                                                    <div class="content-details fadeIn-top fadeIn-right">
+                                                        <h3>Viviana Lopez</h3>
+                                                    </div>
+                                                </div>
+                                                <div class="trainer-details text-center padding20">
+                                                    <h4>Tango Ballroom</h4>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 col-sm-6 col-xs-6 width-100perc">
+                                                <div class="content">
+                                                    <div class="content-overlay"></div>                                              
+                                                    <div class="trainer-img">
+                                                        <img src="static/images/trainer3.jpg" alt="trainer" class="img-responsive">
+                                                    </div>
+                                                    <div class="content-details fadeIn-top fadeIn-right">
+                                                        <h3>James Gregor</h3>
+                                                    </div>
+                                                </div>
+                                                <div class="trainer-details text-center padding20">
+                                                    <h4>Contemporary</h4>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 col-sm-6 col-xs-6 width-100perc">
+                                                <div class="content">
+                                                    <div class="content-overlay"></div>                                                
+                                                    <div class="trainer-img">
+                                                        <img src="static/images/trainer4.jpg" alt="trainer" class="img-responsive">
+                                                    </div>
+                                                    <div class="content-details fadeIn-top fadeIn-right">
+                                                        <h3>Maria Kim</h3>
+                                                    </div>
+                                                </div>
+                                                <div class="trainer-details text-center padding20">
+                                                    <h4>Hip Hop</h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="gallery paddingTop-80" id="gallery">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-12 text-center">
+                        <div class="block-heading paddingbottom-80">
+                            <h2>Dance Gallery</h2>
+                            <p>Slave To The Rhythm</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="gallery-list">
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <ul class="nav nav-tabs">
+                                <li class="active"><a data-toggle="tab" href="#All">All</a></li>
+                                <li><a data-toggle="tab" href="#tango">Tango Ballroom</a></li>
+                                <li><a data-toggle="tab" href="#acrobat">Acrobat</a></li>
+                                <li><a data-toggle="tab" href="#ballet">Ballet Ballerina</a></li>
+                                <li><a data-toggle="tab" href="#hip">Hip Hop</a></li>
+                            </ul>
+                            <div class="tab-content">
+                                <div id="All" class="tab-pane fade in active">
+                                    <div class="row">
+                                        <div class="col-md-4 col-sm-4 col-xs-6 no-padding width-100perc">
+                                            <div class="content">
+                                                <div class="content-overlay"></div>
+                                                <div class="gallery-img">
+                                                    <img src="static/images/gallery1.jpg" alt="gallery" class="img-responsive">
+                                                </div>
+                                                <div class="content-details fadeIn-top fadeIn-right">
+                                                    <h3>Hip Hop</h3>
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit Aenean suscipit faucibus.</p>
+                                                    <a class="example-image-link img-responsive" href="static/images/gallery1-1.jpg" data-lightbox="gallery"><i class="fa fa-plus-circle" aria-hidden="true"></i></a>
+                                                </div> 
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 col-sm-4 col-xs-6 no-padding width-100perc">
+                                            <div class="content">
+                                                <div class="content-overlay"></div>
+                                                <div class="gallery-img">
+                                                    <img src="static/images/gallery2.jpg" alt="gallery" class="img-responsive">
+                                                </div>
+                                                <div class="content-details fadeIn-top fadeIn-right">
+                                                    <h3>Ballet Ballerina</h3>
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit Aenean suscipit faucibus.</p>
+                                                    <a class="example-image-link img-responsive" href="static/images/gallery2-2.jpg" data-lightbox="gallery"><i class="fa fa-plus-circle" aria-hidden="true"></i></a>
+                                                </div> 
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 col-sm-4 col-xs-6 no-padding width-100perc">
+                                            <div class="content">
+                                                <div class="content-overlay"></div>
+                                                <div class="gallery-img">
+                                                    <img src="static/images/gallery3.jpg" alt="gallery" class="img-responsive">
+                                                </div>
+                                                <div class="content-details fadeIn-top fadeIn-right">
+                                                    <h3>Tango Ballroom</h3>
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit Aenean suscipit faucibus.</p>
+                                                    <a class="example-image-link img-responsive" href="static/images/gallery3-3.jpg" data-lightbox="gallery"><i class="fa fa-plus-circle" aria-hidden="true"></i></a>
+                                                </div> 
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 col-sm-4 col-xs-6 no-padding width-100perc">
+                                            <div class="content">
+                                                <div class="content-overlay"></div>
+                                                <div class="gallery-img">
+                                                    <img src="static/images/gallery4.jpg" alt="gallery" class="img-responsive">
+                                                </div>
+                                                <div class="content-details fadeIn-top fadeIn-right">
+                                                    <h3>Acrobat</h3>
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit Aenean suscipit faucibus.</p>
+                                                    <a class="example-image-link img-responsive" href="static/images/gallery4-4.jpg" data-lightbox="gallery"><i class="fa fa-plus-circle" aria-hidden="true"></i></a>
+                                                </div> 
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 col-sm-4 col-xs-6 no-padding width-100perc">
+                                            <div class="content">
+                                                <div class="content-overlay"></div>
+                                                <div class="gallery-img">
+                                                    <img src="static/images/gallery5.jpg" alt="gallery" class="img-responsive">
+                                                </div>
+                                                <div class="content-details fadeIn-top fadeIn-right">
+                                                    <h3>Tango Ballroom</h3>
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit Aenean suscipit faucibus.</p>
+                                                    <a class="example-image-link img-responsive" href="static/images/gallery5-5.jpg" data-lightbox="gallery"><i class="fa fa-plus-circle" aria-hidden="true"></i></a>
+                                                </div> 
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 col-sm-4 col-xs-6 no-padding width-100perc">
+                                            <div class="content">
+                                                <div class="content-overlay"></div>
+                                                <div class="gallery-img">
+                                                    <img src="static/images/gallery6.jpg" alt="gallery" class="img-responsive">
+                                                </div>
+                                                <div class="content-details fadeIn-top fadeIn-right">
+                                                    <h3>Acrobat</h3>
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit Aenean suscipit faucibus.</p>
+                                                    <a class="example-image-link img-responsive" href="static/images/gallery6-6.jpg" data-lightbox="gallery"><i class="fa fa-plus-circle" aria-hidden="true"></i></a>
+                                                </div> 
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="tango" class="tab-pane fade">
+                                    <div class="row">
+                                        <div class="col-md-4 col-sm-4 col-xs-6 no-padding width-100perc">
+                                            <div class="content">
+                                                <div class="content-overlay"></div>
+                                                <div class="gallery-img">
+                                                    <img src="static/images/gallery3.jpg" alt="gallery" class="img-responsive">
+                                                </div>
+                                                <div class="content-details fadeIn-top fadeIn-right">
+                                                    <h3>Tango Ballroom</h3>
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit Aenean suscipit faucibus.</p>
+                                                    <a class="example-image-link img-responsive" href="static/images/gallery3-3.jpg" data-lightbox="gallery"><i class="fa fa-plus-circle" aria-hidden="true"></i></a>
+                                                </div> 
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 col-sm-4 col-xs-6 no-padding width-100perc">
+                                            <div class="content">
+                                                <div class="content-overlay"></div>
+                                                <div class="gallery-img">
+                                                    <img src="static/images/gallery5.jpg" alt="gallery" class="img-responsive">
+                                                </div>
+                                                <div class="content-details fadeIn-top fadeIn-right">
+                                                    <h3>Tango Ballroom</h3>
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit Aenean suscipit faucibus.</p>
+                                                    <a class="example-image-link img-responsive" href="static/images/gallery5-5.jpg" data-lightbox="gallery"><i class="fa fa-plus-circle" aria-hidden="true"></i></a>
+                                                </div> 
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="acrobat" class="tab-pane fade">
+                                    <div class="row">
+                                        <div class="col-md-4 col-sm-4 col-xs-6 no-padding width-100perc">
+                                            <div class="content">
+                                                <div class="content-overlay"></div>
+                                                <div class="gallery-img">
+                                                    <img src="static/images/gallery4.jpg" alt="gallery" class="img-responsive">
+                                                </div>
+                                                <div class="content-details fadeIn-top fadeIn-right">
+                                                    <h3>Acrobat</h3>
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit Aenean suscipit faucibus.</p>
+                                                    <a class="example-image-link img-responsive" href="static/images/gallery4-4.jpg" data-lightbox="gallery"><i class="fa fa-plus-circle" aria-hidden="true"></i></a>
+                                                </div> 
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 col-sm-4 col-xs-6 no-padding width-100perc">
+                                            <div class="content">
+                                                <div class="content-overlay"></div>
+                                                <div class="gallery-img">
+                                                    <img src="static/images/gallery6.jpg" alt="gallery" class="img-responsive">
+                                                </div>
+                                                <div class="content-details fadeIn-top fadeIn-right">
+                                                    <h3>Acrobat</h3>
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit Aenean suscipit faucibus.</p>
+                                                    <a class="example-image-link img-responsive" href="static/images/gallery6-6.jpg" data-lightbox="gallery"><i class="fa fa-plus-circle" aria-hidden="true"></i></a>
+                                                </div> 
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="ballet" class="tab-pane fade">
+                                    <div class="row">
+                                        <div class="col-md-4 col-sm-4 col-xs-6 no-padding width-100perc">
+                                            <div class="content">
+                                                <div class="content-overlay"></div>
+                                                <div class="gallery-img">
+                                                    <img src="static/images/gallery2.jpg" alt="gallery" class="img-responsive">
+                                                </div>
+                                                <div class="content-details fadeIn-top fadeIn-right">
+                                                    <h3>Ballet Ballerina</h3>
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit Aenean suscipit faucibus.</p>
+                                                    <a class="example-image-link img-responsive" href="static/images/gallery2-2.jpg" data-lightbox="gallery"><i class="fa fa-plus-circle" aria-hidden="true"></i></a>
+                                                </div> 
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="hip" class="tab-pane fade">
+                                    <div class="row">
+                                        <div class="col-md-4 col-sm-4 col-xs-6 no-padding width-100perc">
+                                            <div class="content">
+                                                <div class="content-overlay"></div>
+                                                <div class="gallery-img">
+                                                    <img src="static/images/gallery1.jpg" alt="gallery" class="img-responsive">
+                                                </div>
+                                                <div class="content-details fadeIn-top fadeIn-right">
+                                                    <h3>Hip Hop</h3>
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit Aenean suscipit faucibus.</p>
+                                                    <a class="example-image-link img-responsive" href="static/images/gallery1-1.jpg" data-lightbox="gallery"><i class="fa fa-plus-circle" aria-hidden="true"></i></a>
+                                                </div> 
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="testimonial paddingTop-80" id="testimonial">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-12 text-center">
+                        <div class="block-heading paddingbottom-80">
+                            <h2>What Our Happy Students Say</h2>
+                            <p>Slave To The Rhythm</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="testimonial-banner">
+                        <div class="rain-css">
+                            <i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i>
+                        </div>
+                        <div class="testimonial-box">
+                            <div class="container">
+                                <div class="row">
+                                    <div id="testimonial-Carousel" class="carousel slide" data-ride="carousel">
+                                        <!-- Wrapper for slides -->
+                                        <div class="carousel-inner">
+                                            <div class="item active">
+                                                <div class="client-list">
+                                                    <div class=" client-info">
+                                                        <div class="client-img">
+                                                            <i class="fa fa-quote-right"></i>
+                                                        </div>
+                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec posuere augue, in pharetra libero. Integer placerat, massa vitae convallis viverra, nibh quam malesuada felis, quis placerat risus mauris id diam. Duis imperdiet ullamcorper risus rhoncus sodales.</p>
+                                                        <h4>
+                                                            <img src="static/images/client1.jpg" class="img-circle" alt="client">
+                                                            Alice Lengthorn
+                                                        </h4>
+                                                    </div>
+                                                </div>
+                                            </div>
 
-        <div class="loadercoco" style="display:none;"></div>
+                                            <div class="item">
+                                                <div class="client-list">
+                                                    <div class=" client-info">
+                                                        <div class="client-img">
+                                                            <i class="fa fa-quote-right"></i>
+                                                        </div>
+                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec posuere augue, in pharetra libero. Integer placerat, massa vitae convallis viverra, nibh quam malesuada felis, quis placerat risus mauris id diam. Duis imperdiet ullamcorper risus rhoncus sodales.</p>
+                                                        <h4>
+                                                            <img src="static/images/client3.jpg" class="img-circle" alt="client">
+                                                            James Gregor
+                                                        </h4>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="item">
+                                                <div class="client-list">
+                                                    <div class=" client-info">
+                                                        <div class="client-img">
+                                                            <i class="fa fa-quote-right"></i>
+                                                        </div>
+                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec posuere augue, in pharetra libero. Integer placerat, massa vitae convallis viverra, nibh quam malesuada felis, quis placerat risus mauris id diam. Duis imperdiet ullamcorper risus rhoncus sodales.</p>
+                                                        <h4>
+                                                            <img src="static/images/client4.jpg" class="img-circle" alt="client">
+                                                            David Pal
+                                                        </h4>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="item">
+                                                <div class="client-list">
+                                                    <div class=" client-info">
+                                                        <div class="client-img">
+                                                            <i class="fa fa-quote-right"></i>
+                                                        </div>
+                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec posuere augue, in pharetra libero. Integer placerat, massa vitae convallis viverra, nibh quam malesuada felis, quis placerat risus mauris id diam. Duis imperdiet ullamcorper risus rhoncus sodales.</p>
+                                                        <h4>
+                                                            <img src="static/images/client2.jpg" class="img-circle" alt="client">
+                                                            Voranika Nixon
+                                                        </h4>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
 
-        <h3 id="resultcoco">
-            <span> </span>
-        </h3>
-    </center>
-    </div>
-</div>
-    <div class="col-sm-4" style="padding-top: 20px; padding-bottom: 30px;">
-    <center>
-        <div class="image-section-coco" style="display:none;">
-      <input type="button" value = " Reset " onclick="history.go(0)" class="btn btn-success btn-lg " id="btn-predict-coco" />
-        </div>
-    </center>
-    </div>
-
-
-{% endblock %}
+                                        <!-- Left and right controls -->
+                                        <a class="left carousel-control" href="#testimonial-Carousel" role="button" data-slide="prev">
+                                            <img src="static/images/left-arrow.png" onmouseover="this.src = 'static/images/left-arrow-hover.png'" onmouseout="this.src = 'static/images/left-arrow.png'" alt="left">
+                                            <span class="sr-only">Previous</span>
+                                        </a>
+                                        <a class="right carousel-control" href="#testimonial-Carousel" role="button" data-slide="next">
+                                            <img src="static/images/right-arrow.png" onmouseover="this.src = 'static/images/right-arrow-hover.png'" onmouseout="this.src = 'static/images/right-arrow.png'" alt="right">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </section>
+        <section class="contact paddingTop-80" id="contact">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-12 text-center">
+                        <div class="block-heading paddingbottom-80">
+                            <h2>Contact Us</h2>
+                            <p>Slave To The Rhythm</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 col-sm-12 col-xs-12 no-padding">
+                        <div class="map">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d101257.12284776446!2d-77.56330202084071!3d37.52477641775529!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b111095799c9ed%3A0xbfd83e6de2423cc5!2sRichmond%2C+VA%2C+USA!5e0!3m2!1sen!2sin!4v1488891294599"  frameborder="0" style="border:0" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-12 col-xs-12">
+                        <div class="contact-box">
+                            <div class="row">
+                                <div class="col-md-12 col-sm-12 col-xs-12 email-banner">
+                                    <div class="contact-list">
+                                        <h3>
+                                            <i class="fa fa-envelope" aria-hidden="true"></i>
+                                            Email
+                                        </h3>
+                                        <a href="mailto:demo@info.com">demo@info.com</a>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-6 col-xs-6 bgcolor-red width-100">
+                                    <div class="contact-list">
+                                        <div class="left-box">
+                                            <h3>
+                                                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                                Address
+                                            </h3>
+                                            <p>701 Old York Drive</p>
+                                            <p>Richmond</p>
+                                            <p>USA.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-6 col-xs-6 bgcolor-blue width-100">
+                                    <div class="contact-list">
+                                        <div class="right-box">
+                                            <h3>
+                                                <i class="fa fa-phone" aria-hidden="true"></i>
+                                                Phone
+                                            </h3>
+                                            <a href="tel:+1-202-555-0100">Telephone : +1-202-555-0100</a>
+                                            <a href="tel:+1-202-555-0100">+1-202-555-0100</a>
+                                            <a href="tel:+1-202-555-0100">+1-202-555-0100</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="contact-banner">
+                        <div class="rain-css">
+                            <i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i>
+                        </div>
+                        <div class="container">
+                            <div class="contact-form">
+                                <form name="sentMessage" id="contactForm" method="get">
+                                    <div class="row">
+                                        <div class="contact-menu">
+                                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                                <div class="form-group">
+                                                    <input type="text" id="name" class="form-control placeholder-fix" placeholder="Name" required="" aria-invalid="false">
+                                                </div>
+                                                <div class="form-group">
+                                                    <input type="email" id="contact" class="form-control placeholder-fix" placeholder="Email" required="">
+                                                </div>
+                                                <div class="form-group">
+                                                    <input type="text" id="email" class="form-control placeholder-fix" placeholder="Phone Number" required="">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                                <div class="form-group">
+                                                    <textarea name="message" id="message" class="form-control placeholder-fix" rows="5" placeholder="Message" required="" aria-invalid="false"></textarea>
+                                                    <p class="help-block text-danger"></p>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                                <div class="buttons text-center">
+                                                    <button type="reset" class="site-btn3">Clear</button>
+                                                    <button type="submit" class="site-btn3">Send Meassage</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                                <div class="social-icons">
+                                    <ul class="social-icon-list">
+                                        <li>
+                                            <a href="#">
+                                                <i class="fa fa-facebook"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="fa fa-twitter"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="fa fa-pinterest-p"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="fa fa-dribbble"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="fa fa-google-plus"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class="copyright bgcolor-red">
+                <!--Do not remove Backlink from footer of the template. To remove it you can purchase the Backlink-->
+                &copy; 2017 All right reserved. Designed by <a href="http://www.themevault.net/" target="_blank">ThemeVault.</a>
+            </div>
+        </footer>
+        <script src="static/js/wow.min.js"></script>
+        <script src="static/js/mislider.js" type="text/javascript"></script>
+        <script>
+                                                var wow = new WOW({
+                                                    boxClass: 'wow',
+                                                    animateClass: 'animated',
+                                                    offset: 120,
+                                                    mobile: false,
+                                                    live: true
+                                                }
+                                                );
+                                                wow.init();
+        </script> 
+        <script type="text/javascript">
+            jQuery(function ($) {
+                var slider = $('.mis-stage').miSlider({
+                    stageHeight: 550,
+                    slidesOnStage: false,
+                    slidePosition: 'center',
+                    slideStart: 'mid',
+                    slideScaling: 550,
+                    offsetV: -5,
+                    centerV: true,
+                    navButtonsOpacity: 1,
+                    slideWidth: 700,
+                    slideHeight: 600,
+                });
+            });
+        </script>
+        <a id="back-to-top" class="scrollTop back-to-top" href="javascript:void(0);" style="display: none;">
+            <i class="tv-bounce fa fa-angle-double-up"></i>
+        </a>
+    </body>
+</html>
