@@ -10,9 +10,6 @@ from flask import Flask, redirect, url_for, request, render_template
 app = Flask(__name__)
 
 
-print('Running on http://localhost:5000')
-
-
 @app.route('/', methods=['GET'])
 def index():
 	# Main page
